@@ -12,6 +12,7 @@ COPY . .
 RUN touch database/database.sqlite
 
 RUN composer install --no-dev --optimize-autoloader
+RUN php artisan migrate --force
 
 RUN npm install
 RUN npm run build
