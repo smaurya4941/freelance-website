@@ -9,6 +9,8 @@ WORKDIR /app
 
 COPY . .
 
+RUN touch database/database.sqlite
+
 RUN composer install --no-dev --optimize-autoloader
 
 RUN npm install
